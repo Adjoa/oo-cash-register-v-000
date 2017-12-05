@@ -24,7 +24,13 @@ class CashRegister
 
   def items
     arr = []
-    self.itemsIn
+    self.itemsIn.each do |item, info|
+      info.each do |price, quantity|
+        quantity.times do
+          arr << item
+        end
+      end
+    end
   end
   #
   # def void_last_transaction
