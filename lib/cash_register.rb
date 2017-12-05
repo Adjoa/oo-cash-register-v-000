@@ -24,7 +24,7 @@ class CashRegister
 
   def items
     arr = []
-    puts "#{self.itemsIn}"
+    # puts "#{self.itemsIn}"
     self.itemsIn.each do |item, info|
       # puts "#{item} #{info}"
       info.each do |price, quantity|
