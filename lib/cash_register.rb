@@ -24,19 +24,19 @@ class CashRegister
 
   def items
     arr = []
-    self.itemsIn.each do |item, info|
-      puts "#{item} #{item[info == :quantity]}"
-    end
-    # puts "#{self.itemsIn}"
     # self.itemsIn.each do |item, info|
-      # puts "#{item} #{info}"
-      # info.each do |price, quantity|
-      #   puts "#{item} #{quantity}"
-    #     quantity.times do
-    #       arr << item
-    #     end
-      # end
+    #   puts "#{item} #{item[info ==quantity]}"
     # end
+    puts "#{self.itemsIn}"
+    self.itemsIn.each do |item, info|
+      puts "#{item} #{info[:quantity]}"
+      info.each do |price, quantity|
+        puts "#{item} #{quantity}"
+        quantity.times do
+          arr << item
+        end
+      end
+    end
 
     arr
   end
