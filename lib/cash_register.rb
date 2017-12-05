@@ -6,6 +6,7 @@ class CashRegister
     self.total = 0.00
     self.discount = discount
     self.itemsIn = {}
+    self.last_transaction = {}
   end
 
   def add_item(title, price, quantity = 1)
@@ -35,7 +36,7 @@ class CashRegister
   end
 
   def void_last_transaction
-  
+
   end
 
 end
