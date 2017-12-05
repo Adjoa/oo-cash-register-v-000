@@ -12,7 +12,6 @@ class CashRegister
   def add_item(title, price, quantity = 1)
     self.itemsIn[title] = {price: price, quantity: quantity}
     self.total += price * quantity
-
     self.last_transaction.clear
     self.last_transaction[title] = {price: price, quantity: quantity}
   end
@@ -40,7 +39,7 @@ class CashRegister
 
   def void_last_transaction
     self.last_transaction.each do |item, info|
-      cost = info[:price] * info[:quantity]  
+      cost = info[:price] * info[:quantity]
       self.total -= cost
       self.last_transaction.delete(item)
       self.itemsIn.delete(item)
