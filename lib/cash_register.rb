@@ -39,15 +39,11 @@ class CashRegister
   end
 
   def void_last_transaction
-    # puts "#{self.last_transaction}"
     self.last_transaction.each do |item, info|
-      cost = info[:price] * info[:quantity]
+      cost = info[:price] * info[:quantity]  
       self.total -= cost
-      # self.last_transaction.delete(item)
-      # self.itemsIn.delete(item)
-      puts "#{self.last_transaction.delete(item)}"
-      puts "#{self.itemsIn.delete(item)}"
-      puts "#{self.itemsIn}"
+      self.last_transaction.delete(item)
+      self.itemsIn.delete(item)
     end
   end
 
