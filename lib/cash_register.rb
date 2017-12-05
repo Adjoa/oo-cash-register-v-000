@@ -25,13 +25,14 @@ class CashRegister
   def items
     arr = []
     puts "#{self.itemsIn}"
-    # self.itemsIn.each do |item, info|
+    self.itemsIn.each do |item, info|
+      puts "#{item} #{info}"
     #   info.each do |price, quantity|
     #     quantity.times do
     #       arr << item
     #     end
     #   end
-    # end
+    end
 
     arr
   end
