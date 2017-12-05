@@ -10,7 +10,7 @@ class CashRegister
   end
 
   def add_item(title, price, quantity = 1)
-    # ITEMS[title] = {price: price, quantity: quantity}
+    ITEMS[title] = {price: price, quantity: quantity}
     self.total += price * quantity
   end
 
@@ -24,6 +24,7 @@ class CashRegister
   end
 
   def items
+    arr = []
     
   end
   #
