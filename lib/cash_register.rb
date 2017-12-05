@@ -13,6 +13,7 @@ class CashRegister
   def apply_discount
     if @discount > 0
       @total *= (1.00 - discount)
+    end
   end
 
   def items
