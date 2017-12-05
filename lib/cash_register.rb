@@ -9,7 +9,7 @@ class CashRegister
   end
 
   def add_item(title, price, quantity = 1)
-    ITEMS[title] = {price: price, quantity: quantity}
+    self.itemsIn[title] = {price: price, quantity: quantity}
     self.total += price * quantity
   end
 
@@ -24,7 +24,7 @@ class CashRegister
 
   def items
     arr = []
-    
+
   end
   #
   # def void_last_transaction
