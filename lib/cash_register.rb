@@ -47,6 +47,7 @@ class CashRegister
       # self.itemsIn.delete(item)
       puts "#{self.last_transaction.delete(item)}"
       puts "#{self.itemsIn.delete(item)}"
+      puts "#{self.itemsIn.}"
     end
   end
 
