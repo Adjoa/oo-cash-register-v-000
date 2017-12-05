@@ -31,6 +31,8 @@ class CashRegister
         end
       end
     end
+
+    arr
   end
   #
   # def void_last_transaction
