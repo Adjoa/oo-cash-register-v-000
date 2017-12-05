@@ -1,7 +1,7 @@
 class CashRegister
 
   ITEMS = []
-
+  
   attr_accessor :total, :discount, :title, :price
 
   def initialize(discount = 0.00)
@@ -10,7 +10,7 @@ class CashRegister
   end
 
   def add_item(title, price, quantity = 1)
-    ITEMS << title
+    # ITEMS[title] = {price: price, quantity: quantity}
     self.total += price * quantity
   end
 
@@ -22,9 +22,9 @@ class CashRegister
       return "There is no discount to apply."
     end
   end
-
+  
   def items
-    ITEMS
+    
   end
   #
   # def void_last_transaction
