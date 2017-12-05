@@ -24,7 +24,7 @@ class CashRegister
 
   def items
     arr = []
-
+    self.itemsIn
   end
   #
   # def void_last_transaction
